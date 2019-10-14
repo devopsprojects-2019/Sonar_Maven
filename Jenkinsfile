@@ -26,11 +26,7 @@ node{
 		
 		echo 'sonar scan for source code quality check'
 		withMaven(jdk:'JDK-1.8', maven:'Maven-3.6.1'){
-		sh 'mvn verify sonar:sonar \
-  			-Dsonar.projectKey=devopsprojects-2019_Sonar_Maven \
-			-Dsonar.organization=devopsprojects-2019 \
-			-Dsonar.host.url=https://sonarcloud.io \
-			-Dsonar.login=043fdf91216f7ea17c29b3431bd925852b813c1f'
+		sh 'mvn verify sonar:sonar -Dsonar.projectKey=devopsprojects-2019_Sonar_Maven -Dsonar.organization=devopsprojects-2019 -Dsonar.host.url=https://sonarcloud.io  -Dsonar.login=043fdf91216f7ea17c29b3431bd925852b813c1f'
 
 			}
 	}
